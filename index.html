@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Realm Studio | Indie Game Devs</title>
-    <meta name="description" content="Независимая студия разработки игр на Unity.">
+    <title>Chucha Games | Game Studio</title>
+    <meta name="description" content="Chucha Games is an independent studio creating mobile and web games.">
+    <link rel="icon" type="image/png" href="https://play-lh.googleusercontent.com/-ePgjMLebmXJKm5kroLqcvaxsUnJolTNCRsaBE_Sll2PM-wvMoZA0jGHauWzlQP04yg=s188">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
                     colors: {
-                        brand: {
-                            red: '#ff2a5f',
-                            dark: '#0a0a0c',
-                            card: '#121216',
-                            border: '#22222a'
+                        chucha: {
+                            bg: '#21262a',
+                            card: '#1a1e21',
+                            border: '#2e353b',
+                            light: '#fbfaf3',
+                            orange: '#f6841a',
+                            orangeHover: '#d96e0e',
+                            blue: '#2467d5',
+                            blueHover: '#1c52ae',
                         }
                     }
                 }
@@ -27,165 +40,179 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-brand-dark text-gray-200 font-sans antialiased selection:bg-brand-red selection:text-white">
+<body class="bg-chucha-bg text-chucha-light font-sans antialiased selection:bg-chucha-orange selection:text-white">
 
     <!-- Header / Navbar -->
-    <header class="fixed top-0 w-full bg-brand-dark/80 backdrop-blur-md border-b border-brand-border z-50">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-wider text-white flex items-center gap-2">
-                <span class="text-brand-red"><i class="fa-solid font-black fa-gamepad"></i></span> DARK REALM
+    <header class="fixed top-0 w-full bg-chucha-bg/90 backdrop-blur-md border-b border-chucha-border z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="https://play-lh.googleusercontent.com/-ePgjMLebmXJKm5kroLqcvaxsUnJolTNCRsaBE_Sll2PM-wvMoZA0jGHauWzlQP04yg=s188" 
+                     alt="Chucha Games Logo" 
+                     class="w-12 h-12 rounded-xl shadow-md border border-chucha-border group-hover:scale-105 transition duration-300">
+                <span class="text-2xl font-black tracking-wide text-chucha-light group-hover:text-chucha-orange transition">
+                    CHUCHA <span class="text-chucha-orange">GAMES</span>
+                </span>
             </a>
-            <nav class="hidden md:flex gap-8 text-sm font-medium">
-                <a href="#games" class="hover:text-brand-red transition">Игры</a>
-                <a href="#about" class="hover:text-brand-red transition">О студии</a>
-                <a href="#presskit" class="hover:text-brand-red transition">Press Kit</a>
-                <a href="#contact" class="hover:text-brand-red transition">Контакты</a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+                <a href="#games" class="hover:text-chucha-orange transition">Games</a>
+                <a href="#about" class="hover:text-chucha-orange transition">About</a>
+                <a href="#contact" class="hover:text-chucha-orange transition">Contact</a>
+                <a href="https://play.google.com/store/apps/dev?id=5661335907636313215&hl=en" 
+                   target="_blank" 
+                   class="bg-chucha-card border border-chucha-border hover:border-chucha-orange text-chucha-light px-4 py-2 rounded-xl flex items-center gap-2 transition">
+                    <i class="fa-brands fa-google-play text-chucha-orange"></i> Google Play
+                </a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12">
+    <section class="pt-32 pb-16 px-6 max-w-6xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center gap-12">
         <div class="md:w-1/2 space-y-6">
-            <span class="text-brand-red text-sm font-bold uppercase tracking-widest px-3 py-1 bg-brand-red/10 border border-brand-red/30 rounded-full">
-                Indie Game Studio
-            </span>
-            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">
-                Создаем миры, в которых хочется <span class="text-brand-red">увязнуть</span>.
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-chucha-orange/10 border border-chucha-orange/30 text-chucha-orange text-xs font-bold uppercase tracking-widest">
+                <i class="fa-solid fa-gamepad"></i> Game Development Studio
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black text-chucha-light leading-tight">
+                Crafting fun & <span class="text-chucha-orange">engaging</span> game experiences.
             </h1>
-            <p class="text-gray-400 text-lg leading-relaxed">
-                Мы — независимая команда разработчиков. Пилим сочные игры на Unity под WebGL, Mobile и PC.
+            <p class="text-chucha-light/80 text-lg leading-relaxed">
+                We design and develop vibrant mobile and web games focused on satisfying gameplay loops and player retention.
             </p>
-            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                <a href="#games" class="bg-brand-red hover:bg-red-600 text-white font-bold px-6 py-3 rounded-lg transition transform hover:-translate-y-0.5">
-                    Наши проекты
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
+                <a href="https://play.google.com/store/apps/dev?id=5661335907636313215&hl=en" 
+                   target="_blank" 
+                   class="bg-chucha-orange hover:bg-chucha-orangeHover text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-chucha-orange/20 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-brands fa-google-play text-lg"></i> Google Play Store
                 </a>
-                <a href="#contact" class="border border-brand-border hover:border-gray-500 text-gray-300 font-semibold px-6 py-3 rounded-lg transition">
-                    Связаться с нами
+                <a href="#contact" class="border border-chucha-border hover:border-chucha-blue bg-chucha-card text-chucha-light font-semibold px-7 py-3.5 rounded-xl transition">
+                    Get in Touch
                 </a>
             </div>
         </div>
-        <div class="md:w-1/2 flex justify-center">
-            <!-- Заглушка под арт или логотип студии -->
-            <div class="w-72 h-72 md:w-96 md:h-96 rounded-2xl bg-gradient-to-tr from-brand-red/20 to-purple-600/20 border border-brand-border flex items-center justify-center relative overflow-hidden shadow-2xl">
-                <i class="fa-solid fa-dice-d20 text-8xl text-brand-red/40 animate-pulse"></i>
+        
+        <!-- Banner Showcase -->
+        <div class="md:w-1/2 relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-chucha-orange to-chucha-blue rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+            <div class="relative rounded-2xl overflow-hidden border border-chucha-border bg-chucha-card shadow-2xl">
+                <img src="https://play-lh.googleusercontent.com/J3o4dxs1Mo1dsIERveztOkadlk8U-5FweuehuZX4V-vxPZT8_Tj1DWsGcwSXNqaS9AI=w7680-h4320" 
+                     alt="Chucha Games Studio Banner" 
+                     class="w-full h-auto object-cover transform group-hover:scale-102 transition duration-500">
             </div>
         </div>
     </section>
 
-    <!-- Games Showcase Section -->
-    <section id="games" class="py-20 bg-black/40 border-y border-brand-border px-6">
-        <div class="max-w-6xl mx-auto space-y-12">
-            <div class="text-center space-y-3">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Проекты</h2>
-                <p class="text-gray-400">Игры, которые мы выкатили или активно готовим к релизу</p>
-            </div>
+    <!-- Games Section -->
+   
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Game Card 1 -->
-                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-brand-red/50 transition">
-                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
-                        <span class="text-gray-500 font-mono">[ Preview / Trailer GIF ]</span>
-                    </div>
-                    <div class="p-6 space-y-4">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-2xl font-bold text-white">Project Cyber-Blade</h3>
-                            <span class="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded border border-emerald-500/20">Релиз</span>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Динамичный WebGL-экшен с заточкой под браузерный гейминг. Интеграция с CrazyGames и Y8.
-                        </p>
-                        <div class="flex gap-3 pt-2">
-                            <a href="#" class="text-xs bg-brand-border hover:bg-gray-700 text-white px-3 py-2 rounded flex items-center gap-2 transition">
-                                <i class="fa-solid fa-globe"></i> Играть в WebGL
-                            </a>
-                            <a href="#" class="text-xs bg-brand-border hover:bg-gray-700 text-white px-3 py-2 rounded flex items-center gap-2 transition">
-                                <i class="fa-brands fa-google-play"></i> Google Play
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Game Card 2 -->
-                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-brand-red/50 transition">
-                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
-                        <span class="text-gray-500 font-mono">[ Preview / Screen ]</span>
-                    </div>
-                    <div class="p-6 space-y-4">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-2xl font-bold text-white">Dungeon Runner 3D</h3>
-                            <span class="bg-amber-500/10 text-amber-400 text-xs font-bold px-2.5 py-1 rounded border border-amber-500/20">В разработке</span>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Раннер с элементами рогалика. Собираем билд под мобайл и Steam.
-                        </p>
-                        <div class="flex gap-3 pt-2">
-                            <a href="#" class="text-xs bg-brand-border hover:bg-gray-700 text-white px-3 py-2 rounded flex items-center gap-2 transition">
-                                <i class="fa-brands fa-steam"></i> Steam Wishlist
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Press Kit & About Section -->
-    <section id="presskit" class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6" id="about">
-            <h2 class="text-3xl font-bold text-white">О нашей студии</h2>
-            <p class="text-gray-400 leading-relaxed">
-                Мы фокусируемся на кроссплатформенных проектах с упором на чистый геймплей и производительность. Никакого оверхеда — берем архитектуру, оптимизируем шейдеры и собираем билды под любую платформу.
+    <!-- About & Contact Section -->
+    <section id="about" class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+        
+        <!-- About Info -->
+        <div class="space-y-6">
+            <h2 class="text-3xl md:text-4xl font-black text-chucha-light">About <span class="text-chucha-orange">Chucha Games</span></h2>
+            <p class="text-chucha-light/80 leading-relaxed">
+                We are an independent studio dedicated to building captivating, well-tuned games. We focus on player satisfaction, smooth mechanics, and scalable production.
             </p>
-            <div class="p-4 bg-brand-card border border-brand-border rounded-lg space-y-2">
-                <div class="text-sm font-semibold text-white">Ищете материалы для прессы или издателей?</div>
-                <p class="text-xs text-gray-400">В нашем Press Kit собраны логотипы high-res, промо-арты, скриншоты и фактологический лист о студии.</p>
-                <a href="#" class="inline-block pt-2 text-sm text-brand-red font-bold hover:underline">
-                    <i class="fa-solid fa-download mr-1"></i> Скачать Press Kit (.ZIP)
-                </a>
+
+            <div class="p-6 bg-chucha-card border border-chucha-border rounded-2xl space-y-3">
+                <div class="text-lg font-bold text-chucha-light flex items-center gap-2">
+                    <i class="fa-solid fa-handshake text-chucha-orange"></i> Publishing & Business
+                </div>
+                <p class="text-xs text-chucha-light/60 leading-relaxed">
+                    Open for publishing partnerships, ad network integrations, and platform deals. Reach out to discuss business opportunities.
+                </p>
             </div>
         </div>
 
-        <!-- Contact Form -->
-        <div id="contact" class="bg-brand-card border border-brand-border p-8 rounded-2xl shadow-xl">
-            <h3 class="text-2xl font-bold text-white mb-2">Написать нам</h3>
-            <p class="text-xs text-gray-400 mb-6">Паблишинг, предложения по сотрудничеству или фидбек по играм.</p>
+        <!-- Contact Form (Web3Forms) -->
+        <div id="contact" class="bg-chucha-card border border-chucha-border p-8 rounded-2xl shadow-2xl relative">
+            <h3 class="text-2xl font-bold text-chucha-light mb-2">Contact Us</h3>
+            <p class="text-xs text-chucha-light/60 mb-6">Drop us a line and we'll get back to you shortly.</p>
             
-            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                <!-- Замени значение value на свой ключ с сайта web3forms.com (бесплатно за 1 минуту) -->
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <form id="contactForm" class="space-y-4">
+                <input type="hidden" name="access_key" value="4918c629-00ff-4a6c-954d-418ba2e8f4c6">
+                <input type="hidden" name="from_name" value="Chucha Games Website">
 
                 <div>
-                    <label class="block text-xs font-semibold text-gray-400 mb-1">Имя / Компания</label>
-                    <input type="text" name="name" required class="w-full bg-brand-dark border border-brand-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-red">
+                    <label class="block text-xs font-semibold text-chucha-light/80 mb-1">Name / Company</label>
+                    <input type="text" name="name" required placeholder="John / Publisher Inc." 
+                           class="w-full bg-chucha-bg border border-chucha-border rounded-xl px-4 py-3 text-sm text-chucha-light focus:outline-none focus:border-chucha-orange transition">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-gray-400 mb-1">Email</label>
-                    <input type="email" name="email" required class="w-full bg-brand-dark border border-brand-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-red">
+                    <label class="block text-xs font-semibold text-chucha-light/80 mb-1">Email</label>
+                    <input type="email" name="email" required placeholder="name@domain.com" 
+                           class="w-full bg-chucha-bg border border-chucha-border rounded-xl px-4 py-3 text-sm text-chucha-light focus:outline-none focus:border-chucha-orange transition">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-gray-400 mb-1">Сообщение</label>
-                    <textarea name="message" rows="4" required class="w-full bg-brand-dark border border-brand-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-red"></textarea>
+                    <label class="block text-xs font-semibold text-chucha-light/80 mb-1">Message</label>
+                    <textarea name="message" rows="4" required placeholder="Hi! We'd like to discuss partnership opportunities..." 
+                              class="w-full bg-chucha-bg border border-chucha-border rounded-xl px-4 py-3 text-sm text-chucha-light focus:outline-none focus:border-chucha-orange transition"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-brand-red hover:bg-red-600 text-white font-bold py-3 rounded transition">
-                    Отправить сообщение
+                
+                <button type="submit" id="submitBtn" 
+                        class="w-full bg-chucha-orange hover:bg-chucha-orangeHover text-white font-bold py-3.5 rounded-xl shadow-lg shadow-chucha-orange/20 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Send Message
                 </button>
             </form>
+
+            <div id="formStatus" class="hidden mt-4 p-3 rounded-xl text-xs font-semibold text-center"></div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-brand-border py-8 text-center text-xs text-gray-500">
+    <footer class="border-t border-chucha-border py-8 text-center text-xs text-chucha-light/50">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div>&copy; 2026 Dark Realm Studio. Все права защищены.</div>
-            <div class="flex gap-6 text-base text-gray-400">
-                <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-discord"></i></a>
-                <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-github"></i></a>
+            <div class="flex items-center gap-2">
+                <img src="https://play-lh.googleusercontent.com/-ePgjMLebmXJKm5kroLqcvaxsUnJolTNCRsaBE_Sll2PM-wvMoZA0jGHauWzlQP04yg=s188" 
+                     alt="Chucha Games" class="w-6 h-6 rounded-md">
+                <span>&copy; 2026 Chucha Games. All rights reserved.</span>
+            </div>
+            <div class="flex gap-6 text-base text-chucha-light/70">
+                <a href="https://play.google.com/store/apps/dev?id=5661335907636313215&hl=en" target="_blank" class="hover:text-chucha-orange transition">
+                    <i class="fa-brands fa-google-play"></i>
+                </a>
             </div>
         </div>
     </footer>
 
+    <!-- Form Submit Handler (AJAX) -->
+    <script>
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const statusDiv = document.getElementById('formStatus');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Sending...';
+            
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    statusDiv.className = "mt-4 p-3 rounded-xl text-xs font-semibold text-center bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+                    statusDiv.innerText = "Message sent successfully! We'll get back to you soon.";
+                    statusDiv.classList.remove('hidden');
+                    form.reset();
+                } else {
+                    throw new Error(data.message || "Failed to send");
+                }
+            } catch (err) {
+                statusDiv.className = "mt-4 p-3 rounded-xl text-xs font-semibold text-center bg-rose-500/20 text-rose-300 border border-rose-500/30";
+                statusDiv.innerText = "Failed to send message. Please try again later.";
+                statusDiv.classList.remove('hidden');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+            }
+        });
+    </script>
 </body>
 </html>
