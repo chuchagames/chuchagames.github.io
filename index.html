@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Realm Studio | Indie Game Devs</title>
+    <meta name="description" content="Независимая студия разработки игр на Unity.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#ff2a5f',
+                            dark: '#0a0a0c',
+                            card: '#121216',
+                            border: '#22222a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brand-dark text-gray-200 font-sans antialiased selection:bg-brand-red selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 w-full bg-brand-dark/80 backdrop-blur-md border-b border-brand-border z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-wider text-white flex items-center gap-2">
+                <span class="text-brand-red"><i class="fa-solid font-black fa-gamepad"></i></span> DARK REALM
+            </a>
+            <nav class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#games" class="hover:text-brand-red transition">Игры</a>
+                <a href="#about" class="hover:text-brand-red transition">О студии</a>
+                <a href="#presskit" class="hover:text-brand-red transition">Press Kit</a>
+                <a href="#contact" class="hover:text-brand-red transition">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="md:w-1/2 space-y-6">
+            <span class="text-brand-red text-sm font-bold uppercase tracking-widest px-3 py-1 bg-brand-red/10 border border-brand-red/30 rounded-full">
+                Indie Game Studio
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">
+                Создаем миры, в которых хочется <span class="text-brand-red">увязнуть</span>.
+            </h1>
+            <p class="text-gray-400 text-lg leading-relaxed">
+                Мы — независимая команда разработчиков. Пилим сочные игры на Unity под WebGL, Mobile и PC.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="#games" class="bg-brand-red hover:bg-red-600 text-white font-bold px-6 py-3 rounded-lg transition transform hover:-translate-y-0.5">
+                    Наши проекты
+                </a>
+                <a href="#contact" class="border border-brand-border hover:border-gray-500 text-gray-300 font-semibold px-6 py-3 rounded-lg transition">
+                    Связаться с нами
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+            <!-- Заглушка под арт или логотип студии -->
+            <div class="w-72 h-72 md:w-96 md:h-96 rounded-2xl bg-gradient-to-tr from-brand-red/20 to-purple-600/20 border border-brand-border flex items-center justify-center relative overflow-hidden shadow-2xl">
+                <i class="fa-solid fa-dice-d20 text-8xl text-brand-red/40 animate-pulse"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Showcase Section -->
+    <section id="games" class="py-20 bg-black/40 border-y border-brand-border px-6">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Проекты</h2>
+                <p class="text-gray-400">Игры, которые мы выкатили или активно готовим к релизу</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Game Card 1 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-brand-red/50 transition">
+                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
+                        <span class="text-gray-500 font-mono">[ Preview / Trailer GIF ]</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold text-white">Project Cyber-Blade</h3>
+                            <span class="bg-emerald-500/10 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded border border-emerald-500/20">Релиз</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">
+                            Динамичный WebGL-экшен с заточкой под браузерный гейминг. Интеграция с CrazyGames и Y8.
+                        </p>
+                        <div class="flex gap-3 pt-2">
+                            <a href="#" class="text-xs bg-brand-border hover:bg-gray-700 text-white px-3 py-2 rounded flex items-center gap-2 transition">
+                                <i class="fa-solid fa-globe"></i> Играть в WebGL
+                            </a>
+                            <a href="#" class="text-xs bg-brand-border hover:bg-gray-700 text-white px-3 py-2 rounded flex items-center gap-2 transition">
+                                <i class="fa-brands fa-google-play"></i> Google Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 2 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-brand-red/50 transition">
+                    <div class="h-48 bg-gray-800 flex items-center justify-center relative">
+                        <span class="text-gray-500 font-mono">[ Preview / Screen ]</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold text-white">Dungeon Runner 3D</h3>
+                            <span class="bg-amber-500/10 text-amber-400 text-xs font-bold px-2.5 py-1 rounded border border-amber-500/20">В разработке</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">
+                            Раннер с элементами рогалика. Собираем билд под мобайл и Steam.
+                        </p>
+                        <div class="flex gap-3 pt-2">
+                            <a href="#" class="text-xs bg-brand-border hover:bg-gray-700 text-white px-3 py-2 rounded flex items-center gap-2 transition">
+                                <i class="fa-brands fa-steam"></i> Steam Wishlist
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Kit & About Section -->
+    <section id="presskit" class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6" id="about">
+            <h2 class="text-3xl font-bold text-white">О нашей студии</h2>
+            <p class="text-gray-400 leading-relaxed">
+                Мы фокусируемся на кроссплатформенных проектах с упором на чистый геймплей и производительность. Никакого оверхеда — берем архитектуру, оптимизируем шейдеры и собираем билды под любую платформу.
+            </p>
+            <div class="p-4 bg-brand-card border border-brand-border rounded-lg space-y-2">
+                <div class="text-sm font-semibold text-white">Ищете материалы для прессы или издателей?</div>
+                <p class="text-xs text-gray-400">В нашем Press Kit собраны логотипы high-res, промо-арты, скриншоты и фактологический лист о студии.</p>
+                <a href="#" class="inline-block pt-2 text-sm text-brand-red font-bold hover:underline">
+                    <i class="fa-solid fa-download mr-1"></i> Скачать Press Kit (.ZIP)
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div id="contact" class="bg-brand-card border border-brand-border p-8 rounded-2xl shadow-xl">
+            <h3 class="text-2xl font-bold text-white mb-2">Написать нам</h3>
+            <p class="text-xs text-gray-400 mb-6">Паблишинг, предложения по сотрудничеству или фидбек по играм.</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                <!-- Замени значение value на свой ключ с сайта web3forms.com (бесплатно за 1 минуту) -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-400 mb-1">Имя / Компания</label>
+                    <input type="text" name="name" required class="w-full bg-brand-dark border border-brand-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-red">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-400 mb-1">Email</label>
+                    <input type="email" name="email" required class="w-full bg-brand-dark border border-brand-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-red">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-400 mb-1">Сообщение</label>
+                    <textarea name="message" rows="4" required class="w-full bg-brand-dark border border-brand-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-red"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brand-red hover:bg-red-600 text-white font-bold py-3 rounded transition">
+                    Отправить сообщение
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-brand-border py-8 text-center text-xs text-gray-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>&copy; 2026 Dark Realm Studio. Все права защищены.</div>
+            <div class="flex gap-6 text-base text-gray-400">
+                <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
